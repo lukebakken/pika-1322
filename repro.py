@@ -14,6 +14,6 @@ chan.exchange_declare(
 
 while True:
     print('sleeping...')
-    time.sleep(5)
+    conn.sleep(5)
     print('publishing...')
     chan.basic_publish(exchange=exch, routing_key='foobar', body='bazbat')
